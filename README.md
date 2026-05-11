@@ -9,7 +9,7 @@ Sistema de gerenciamento de contatos desenvolvido em Java, utilizando JDBC para 
 * **JDBC** (Java Database Connectivity)
 
 ## Estrutura do Projeto (SOLID)
-O projeto está organizado conforme os princípios de design:
+Como o projeto está organizado:
 - **`model`**: Entidade Contato.
 - **`repository`**: Interface e implementação JDBC (Inversão de
 Dependência).
