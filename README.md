@@ -8,11 +8,15 @@ Sistema de gerenciamento de contatos desenvolvido em Java, utilizando JDBC para 
 * **SQLite** (Banco de dados relacional)
 * **JDBC** (Java Database Connectivity)
 
-## Arquitetura e SOLID
-O projeto foi estruturado seguindo os princípios SOLID:
-* **S (Single Responsibility):** Cada classe possui uma responsabilidade única (Model, Repository, Service, UI).
-* **D (Dependency Inversion):** O Service depende de uma interface (`ContatoRepository`), permitindo a troca da implementação de persistência sem afetar a lógica de negócio.
-* **Camadas:** Separação clara entre interface de usuário (Console), lógica de negócio (Service) e acesso a dados (Repository).
+## Estrutura do Projeto (SOLID)
+O projeto está organizado conforme os princípios de design:
+- **`model`**: Entidade Contato.
+- **`repository`**: Interface e implementação JDBC (Inversão de
+Dependência).
+- **`service`**: Regras de negócio separadas da UI (Responsabilidade
+Única).
+- **`database`**: Gestão da conexão SQLite.
+- **`ui`**: Interface de console.
 
 ## Como Executar
 1. Certifique-se de ter o **Maven** instalado e configurado no seu PATH.
