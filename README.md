@@ -1,22 +1,22 @@
 # Agenda de Contatos - Desafio Técnico (SOLID + JDBC)
-Sistema de gerenciamento de contatos via console desenvolvido em Java,
-utilizando JDBC para persistência em SQLite e seguindo os princípios
-**SOLID**.
+
+Sistema de gerenciamento de contatos desenvolvido em Java, utilizando JDBC para persistência em banco de dados SQLite. O projeto segue os princípios SOLID e padrões de arquitetura em camadas.
+
+## Tecnologias Utilizadas
+* **Java 17** (ou superior)
+* **Maven** (Gerenciamento de dependências)
+* **SQLite** (Banco de dados relacional)
+* **JDBC** (Java Database Connectivity)
+
+## Arquitetura e SOLID
+O projeto foi estruturado seguindo os princípios SOLID:
+* **S (Single Responsibility):** Cada classe possui uma responsabilidade única (Model, Repository, Service, UI).
+* **D (Dependency Inversion):** O Service depende de uma interface (`ContatoRepository`), permitindo a troca da implementação de persistência sem afetar a lógica de negócio.
+* **Camadas:** Separação clara entre interface de usuário (Console), lógica de negócio (Service) e acesso a dados (Repository).
+
 ## Como Executar
-1. Certifique-se de ter o **Java 17** e o **Maven** instalados.
+1. Certifique-se de ter o **Maven** instalado e configurado no seu PATH.
 2. Clone o repositório.
-3. No terminal, execute: `mvn clean install`
-4. Rode a classe `Main.java`.
-## Estrutura do Projeto (SOLID)
-O projeto está organizado conforme os princípios de design:
-- **`model`**: Entidade Contato.
-- **`repository`**: Interface e implementação JDBC (Inversão de
-Dependência).
-- **`service`**: Regras de negócio separadas da UI (Responsabilidade
-Única).
-- **`database`**: Gestão da conexão SQLite.
-- **`ui`**: Interface de console.
-## Tecnologias
-- Java 17
-- SQLite
-- Maven
+3. Na raiz do projeto, execute o comando para compilar e baixar as dependências:
+   ```bash
+   mvn clean install
